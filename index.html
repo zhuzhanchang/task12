@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task12</title>
+	<style>
+		#div { width: 480px; height: 480px; margin: 50px auto; background: url(img.jpg) no-repeat; }
+	</style>
+</head>
+<body>
+	<div id="div"></div>
+</body>
+</html>
+<script>
+	var oDiv = document.querySelector('#div');
+	var n = 16;
+	function doMove() {
+		n++;
+		var x = Math.abs(16- n%33) 
+		oDiv.style.backgroundPositionY = -480*x + 'px';		
+	}
+	setInterval(doMove, 100);
+</script>

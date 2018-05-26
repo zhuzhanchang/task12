@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>task12</title>
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+</head>
+<body>            
+    <label>
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select">        
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">        
+        <option>百度</option>
+        <option>爱奇艺</option>        
+    </select>
+</body>
+</html>
+<script>
+    var oSchool = document.querySelector('#school');
+    var oCompany = document.querySelector('#company');
+    var oSchoolSelect = document.querySelector('#school-select');
+    var oCompanySelect = document.querySelector('#company-select');
+    oSchool.addEventListener( 'click',  function () {
+        oCompanySelect.style.display = 'none';
+        oSchoolSelect.style.display = 'block';
+    }, false)
+    oCompany.addEventListener( 'click',  function () {
+        oSchoolSelect.style.display = 'none';
+        oCompanySelect.style.display = 'block';
+    }, false)
+
+</script>

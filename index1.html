@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task12</title>
+</head>
+<body>
+	<input id="name" type="text">
+	<button id="submit-btn">Submit</button>
+</body>
+</html>
+<script type="text/javascript">
+	var oInput = document.querySelector('#name');
+	var oBtn = document.querySelector('#submit-btn');
+	oBtn.onclick = function () {
+		console.log(oInput.value);
+	}
+	oInput.onkeydown = function (e) {
+		ev = e || event;
+		if (ev.keyCode == 13) {
+			console.log(oInput.value);
+		}
+		if (ev.keyCode == 27) {
+			oInput.value = '';
+		}	
+	}
+</script>
